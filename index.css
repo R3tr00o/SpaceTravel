@@ -114,6 +114,11 @@ select {
   max-width: 80rem;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 2em minmax(0, 60rem) 2em;
+}
+
 /* Screen readed only */
 .sr-only {
   position: absolute;
@@ -239,7 +244,7 @@ select {
 
 .large-button {
   position: relative;
-  display: grid;
+  display: inline-grid;
   z-index: 1;
   place-items: center;
   padding: 0 2em;
