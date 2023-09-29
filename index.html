@@ -19,6 +19,7 @@
     <!-- Our custom CSS -->
     <link rel="stylesheet" href="index.css" />
     <title>Space tourism</title>
+    <script src="index.js" defer></script>
   </head>
   <body class="home">
     <header class="primary-header flex">
@@ -29,13 +30,20 @@
           class="logo"
         />
       </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <span aria-expanded="false" class="sr-only">Menu</span>
+      </button>
       <nav>
-        <ul class="primary-navigation underline-indicators flex">
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation underline-indicators flex"
+        >
           <li class="active">
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               href="index.html"
-              ><span>00</span>Home</a
+              ><span aria-expanded="false">00</span>Home</a
             >
           </li>
           <li>
@@ -63,11 +71,13 @@
       </nav>
     </header>
 
-    <div class="grid-container">
+    <div class="grid-container grid-container--home">
       <div>
         <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
-          So, you want to travel to
-          <span class="fs-900 ff-serif text-white">Space</span>
+          So, you want to travel to<span
+            class="d-block fs-900 ff-serif text-white"
+            >Space</span
+          >
         </h1>
         <p>
           Let’s face it; if you want to go to space, you might as well genuinely
@@ -77,9 +87,7 @@
         </p>
       </div>
       <div>
-        <a
-          href="#"
-          class="large-button ff-serif uppercase fs-600 text-dark bg-white"
+        <a href="#" class="large-button ff-serif uppercase text-dark bg-white"
           >Explore</a
         >
       </div>
