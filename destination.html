@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="index.css" />
     <title>Space tourism</title>
     <script src="navigation.js" defer></script>
+    <script src="tabs.js" defer></script>
   </head>
 
   <body class="destination">
@@ -108,35 +109,51 @@
         <img src="assets/destination/image-titan.png" alt="the moon titan" />
       </picture>
 
-      <div class="tab-list underline-indicators flex">
+      <div
+        class="tab-list underline-indicators flex"
+        role="tablist"
+        aria-label="destination list"
+      >
         <button
           aria-selected="true"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
+          aria-controls="moon-tab"
+          tabindex="0"
         >
           Moon
         </button>
         <button
           aria-selected="false"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
+          aria-controls="mars-tab"
+          tabindex="-1"
         >
           Mars
         </button>
         <button
           aria-selected="false"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
+          aria-controls="europa-tab"
+          tabindex="-1"
         >
           Europa
         </button>
         <button
           aria-selected="false"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          role="tab"
+          aria-controls="titan-tab"
+          tabindex="-1"
         >
           Titan
         </button>
       </div>
 
       <!-- MOON -->
-      <article class="destination-info flow">
+      <article class="destination-info flow" id="moon-tab" tabindex="0">
         <h2 class="ff-serif fs-800 uppercase">Moon</h2>
 
         <p>
@@ -159,7 +176,7 @@
       </article>
 
       <!-- MARS -->
-      <article class="destination-info flow" hidden>
+      <article class="destination-info flow" hidden id="mars-tab" tabindex="0">
         <h2 class="ff-serif fs-800 uppercase">Mars</h2>
 
         <p>
@@ -181,7 +198,12 @@
       </article>
 
       <!-- EUROPA -->
-      <article class="destination-info flow" hidden>
+      <article
+        class="destination-info flow"
+        hidden
+        id="europa-tab"
+        tabindex="0"
+      >
         <h2 class="ff-serif fs-800 uppercase">Europa</h2>
 
         <p>
@@ -204,7 +226,7 @@
       </article>
 
       <!-- TITAN -->
-      <article class="destination-info flow" hidden>
+      <article class="destination-info flow" hidden id="titan-tab" tabindex="0">
         <h2 class="ff-serif fs-800 uppercase">Titan</h2>
 
         <p>

@@ -97,6 +97,10 @@ picture {
   display: block;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 /* make form elements easier to work with */
 
 input,
